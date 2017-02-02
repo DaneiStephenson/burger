@@ -17,7 +17,7 @@ var exphbs = require("express-handlebars");
 //mysql
 var mysql = require("mysql");
 
-if(process.enc.JAWSDB_URL) {
+if(process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
 var connection = mysql.createConnection({
