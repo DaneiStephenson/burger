@@ -1,0 +1,35 @@
+<h1>Whats's on the menu</h1>
+
+<form action="/" method="POST">
+	<textarea type="text" name="event"></textarea>
+
+	<button type="submit">Submit</button>
+</form>						
+
+
+<div id="eat">
+	
+	{{#each burgers_db}}
+	{{#unless this.devoured}}
+		<p>{{this.id}}. {{this.burger_name}} </p>
+		
+	<form action="/devoured/{{this.id}}" method="POST">
+		<input type="hidden" name="id" value="{{this.burger_name}}">
+		<button type="submit">Devour it!</button>
+	</form>			
+	{{/unless}}	
+	{{/each}}
+</div>
+
+<div id="eaten">
+<h3>Look at that bill!</h3>
+	<ul>
+		{{#each burgers_db}}
+		{{#if this.devoured}}
+			<li>
+				<p>{{this.id}}. {{this.burger_name}} </p>
+			</li>
+		{{/if}}
+		{{/each}}
+	</ul>
+</div>	

@@ -1,0 +1,34 @@
+body {
+		background-color: blue;
+	background-image: url("https://images.genius.com/ac534fbffc2c777923f67bced38b6f91.1000x1000x1.jpg");
+	background-size: 100%;
+	background-attachment: fixed;
+	font-size: 25px;
+	color:#266670;
+}
+h1, form {
+	text-align:center;
+}
+
+p {
+	color:white;
+	text-align:center;
+	
+}
+#eat {
+	background-color:black;
+	opacity: 0.6;
+	float:left;
+	margin-left:20%;
+	padding:30px;
+	width:250px;
+}
+#eaten {
+	background-color:black;
+	opacity: 0.6;
+	float:right;
+	margin-right:20%;
+	padding:30px;
+	width:250px;
+
+}
